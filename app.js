@@ -3,19 +3,9 @@ function getInputValue(inputId) {
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
     const inputAmount = parseFloat(inputAmountText);
-
-    if (typeof (inputAmount) != 'number' && typeof (inputAmount) == 'string' && inputAmount < 0) {
-        const a = document.getElementById('income-error');
-        a.innerText = 'Invalid input: Only positive number is acceptable! ';
-
-
-    }
-    else {
+    if (inputAmount > 0) {
         return inputAmount;
-
     }
-
-
 
 
 };
@@ -45,7 +35,12 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     }
     else {
-        alert('Total expenses can`t be more then your Income !');
+
+        alert('You have given wrong  input !');
+        document.getElementById('input-income').value = '';
+        document.getElementById('food-input').value = '';
+        document.getElementById('rent-input').value = '';
+        document.getElementById('cloths-input').value = '';
     }
 
 
@@ -71,11 +66,14 @@ document.getElementById('save-btn').addEventListener('click', function () {
         const savingAmountDisplay = displayNumbers('display-saving-amount', savingAmount);
         const remainingBalance = balance - savingAmount;
         const remainingBalanceDisplay = displayNumbers('display-remaining-balance', remainingBalance)
+        document.getElementById('saving-error').innerText = '';
 
     }
     else {
-        const a = document.getElementById('saving-error');
-        a.innerText = 'Low balance ';
+        document.getElementById('saving-error').innerText = 'Low balance ! ';
+        document.getElementById('display-saving-amount').innerText = '';
+        document.getElementById('display-remaining-balance').innerText = '';
+
     }
 
 
