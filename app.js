@@ -11,10 +11,7 @@ function displayNumbers(totalFieldId, amount) {
     const previousTotal = parseFloat(totalText);
     totalElement.innerText = amount;
 }
-
-
-
-
+///////////////////////////////////////////////////////////
 
 
 
@@ -31,6 +28,16 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
     const balance = income - totalCost;
     const balanceDisplay = displayNumbers('display-balance', balance)
+});
 
+////////////////  save button handle  /////////////////////
+document.getElementById('save-btn').addEventListener('click', function () {
+    const percentageNumber = getInputValue('save-input');
+    const income = getInputValue('input-income');
+    const savingAmount = (income * percentageNumber) / 100;
+    const savingAmountDisplay = displayNumbers('display-saving-amount', savingAmount);
+
+    const remainingBalance = balance - savingAmount;
+    console.log(remainingBalance);
 
 })
