@@ -1,3 +1,8 @@
+
+
+
+
+/////////////////////////// function /////////////////////
 function getInputValue(inputId) {
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
@@ -37,7 +42,18 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const savingAmount = (income * percentageNumber) / 100;
     const savingAmountDisplay = displayNumbers('display-saving-amount', savingAmount);
 
-    const remainingBalance = balance - savingAmount;
-    console.log(remainingBalance);
+    // const income = getInputValue('input-income');
+    const food = getInputValue('food-input');
+    const rent = getInputValue('rent-input');
+    const cloths = getInputValue('cloths-input');
+    const totalCost = food + rent + cloths;
 
-})
+    const balance = income - totalCost;
+
+
+    const remainingBalance = balance - savingAmount;
+    const remainingBalanceDisplay = displayNumbers('display-remaining-balance', remainingBalance)
+
+});
+
+
