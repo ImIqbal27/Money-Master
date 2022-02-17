@@ -8,6 +8,7 @@ function getInputValue(inputId) {
     }
 
 
+
 };
 
 function displayNumbers(totalFieldId, amount) {
@@ -41,6 +42,12 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         document.getElementById('food-input').value = '';
         document.getElementById('rent-input').value = '';
         document.getElementById('cloths-input').value = '';
+        document.getElementById('save-input').value = '';
+        document.getElementById('display-saving-amount').innerText = '';
+        document.getElementById('display-remaining-balance').innerText = '';
+        document.getElementById('display-total-cost').innerText = '';
+        document.getElementById('display-balance').innerText = '';
+
     }
 
 
@@ -70,7 +77,8 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
     }
     else {
-        document.getElementById('saving-error').innerText = 'Low balance ! ';
+
+        document.getElementById('saving-error').innerText = 'Low balance or wrong input ! ';
         document.getElementById('display-saving-amount').innerText = '';
         document.getElementById('display-remaining-balance').innerText = '';
 
