@@ -16,7 +16,7 @@
         <h1 class="text-center my-5">My Monthly Cost</h1>
 
         <div class="row d-flex gap-3">
-            <div class="col bg-success">
+            <div class="col ">
                 <img class="mb-5 w-100 " src=" images/img-6.jpg" alt="">
             </div>
             <div class="col">
@@ -24,14 +24,14 @@
                     <b>Income</b>
                     <p>Income: <input id="input-income" type="text" name="" id=""></p>
                     <b>Expenses</b>
-                    <p>Food: <input type="text" name="" id=""></p>
-                    <p>Rent: <input type="text" name="" id=""></p>
-                    <p>Cloths:<input type="text" name="" id=""></p>
+                    <p>Food: <input id="food-input" type="text" name=""></p>
+                    <p>Rent: <input id="rent-input" type="text" name=""></p>
+                    <p>Cloths:<input id="cloths-input" type="text" name=""></p>
 
                     <button id="calculate-btn" class="btn btn-primary">Calculate</button>
 
-                    <p>Total Expenses : 4500</p>
-                    <p>Balance: 5500</p>
+                    <p>Total Expenses : <span id="display-total-cost"> </span> </p>
+                    <p>Balance: <span id="display-balance"></span></p>
 
 
                     <b>Save <input type="text" name="" id=""> % <button class="btn btn-primary">Save</button> </b> <br>
