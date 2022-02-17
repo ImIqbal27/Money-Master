@@ -9,11 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        .btn-style {
+        .btn-style-cal {
             color: white;
             padding-left: 44px;
             padding-right: 60px;
 
+        }
+
+        .btn-style-save {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        .error-message-style {
+            color: red;
         }
     </style>
 
@@ -23,44 +32,48 @@
     <div class="container bg-light mb-3">
         <h1 class="text-center mt-2">My Monthly Cost </h1>
 
-        <div class="row  gap-5">
-            <div class="col  ">
+        <div class="row ">
+            <div class="col-sm-12 col-md-6  col-lg-6">
                 <img class="w-100 mb-2 img-fluid" src=" images/img2.jpg" alt="">
             </div>
-            <div class="col col-md-6 px-5  ">
+            <div class="col-sm-12 col-md-6 col-lg-6 px-5  ">
                 <div class="form-group row mb-2 ">
                     <b class="text-center  mb-3"> Income</b>
-                    <label for="example-text-input" class="col-4 col-form-label text-center">Income: </label>
+                    <label for="example-text-input" class="col-4 col-form-label text-center">Income:</label>
                     <div class="col-8">
-                        <input class="form-control" type="text" id="input-income">
+                        <input class="form-control" type="text" id="input-income" required>
+
                     </div>
+                    <small id="income-error" class="ncome-error  text-center   error-message-style"></small>
+
                 </div>
                 <div class="form-group row mb-3">
                     <b class="text-center  mb-3"> Expenses</b>
-                    <label for="example-text-input" class="col-4 col-form-label text-center">Food: </label>
+                    <label for="example-text-input" class="col-4 col-form-label text-center">Food:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" id="food-input">
                     </div>
                 </div>
                 <div class="form-group row mb-3">
-                    <label for="example-text-input" class="col-4 col-form-label  text-center">Rent: </label>
+                    <label for="example-text-input" class="col-4 col-form-label  text-center">Rent:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" id="rent-input">
                     </div>
                 </div>
                 <div class="form-group row mb-4">
-                    <label for="example-text-input" class="col-4 col-form-label  text-center">Cloths: </label>
+                    <label for="example-text-input" class="col-4 col-form-label  text-center">Cloths:</label>
                     <div class="col-8">
                         <input class="form-control" type="text" id="cloths-input">
                     </div>
                 </div>
                 <div class="text-center">
-                    <button id="calculate-btn" class="btn btn-primary mb-3  btn-style">Calculate</button>
+                    <button id="calculate-btn" class="btn btn-primary mb-3  btn-style-cal">Calculate</button>
                     <h6>Total Expenses : <span id="display-total-cost" class="mb-3"> </span> </h6>
                     <h6>Balance: <span id="display-balance"></span></h6>
 
                     <b>Save <input id="save-input" type="text" name=""> % <button id="save-btn"
-                            class="btn btn-primary mx-3"> Save</button> </b> <br>
+                            class="btn btn-primary mx-3  btn-style-save"> Save</button> </b> <br>
+                    <small id="saving-error" class="error-message-style "></small>
 
                     <br>
                     <b>Saving Amount :<span id="display-saving-amount"></span></b> <br>
