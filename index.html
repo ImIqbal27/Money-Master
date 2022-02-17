@@ -8,44 +8,65 @@
     <title>Assignment-5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .btn-style {
+            color: white;
+            padding-left: 44px;
+            padding-right: 60px;
+
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="container bg-light">
-        <h1 class="text-center my-5">My Monthly Cost</h1>
+    <div class="container bg-light mb-3">
+        <h1 class="text-center mt-2">My Monthly Cost </h1>
 
-        <div class="row d-flex gap-3">
-            <div class="col ">
-                <img class="mb-5 w-100 " src=" images/img-6.jpg" alt="">
+        <div class="row  gap-5">
+            <div class="col  ">
+                <img class="w-100 mb-2 img-fluid" src=" images/img2.jpg" alt="">
             </div>
-            <div class="col">
+            <div class="col col-md-6 px-5  ">
+                <div class="form-group row mb-2 ">
+                    <b class="text-center  mb-3"> Income</b>
+                    <label for="example-text-input" class="col-4 col-form-label text-center">Income: </label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" id="input-income">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <b class="text-center  mb-3"> Expenses</b>
+                    <label for="example-text-input" class="col-4 col-form-label text-center">Food: </label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" id="food-input">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="example-text-input" class="col-4 col-form-label  text-center">Rent: </label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" id="rent-input">
+                    </div>
+                </div>
+                <div class="form-group row mb-4">
+                    <label for="example-text-input" class="col-4 col-form-label  text-center">Cloths: </label>
+                    <div class="col-8">
+                        <input class="form-control" type="text" id="cloths-input">
+                    </div>
+                </div>
                 <div class="text-center">
-                    <b>Income</b>
-                    <p>Income: <input id="input-income" type="text" name="" id=""></p>
-                    <b>Expenses</b>
-                    <p>Food: <input id="food-input" type="text" name=""></p>
-                    <p>Rent: <input id="rent-input" type="text" name=""></p>
-                    <p>Cloths:<input id="cloths-input" type="text" name=""></p>
-
-                    <button id="calculate-btn" class="btn btn-primary">Calculate</button>
-
-                    <p>Total Expenses : <span id="display-total-cost"> </span> </p>
-                    <p>Balance: <span id="display-balance"></span></p>
-
+                    <button id="calculate-btn" class="btn btn-primary mb-3  btn-style">Calculate</button>
+                    <h6>Total Expenses : <span id="display-total-cost" class="mb-3"> </span> </h6>
+                    <h6>Balance: <span id="display-balance"></span></h6>
 
                     <b>Save <input id="save-input" type="text" name=""> % <button id="save-btn"
-                            class="btn btn-primary">Save</button> </b> <br>
-                    <br>
+                            class="btn btn-primary mx-3"> Save</button> </b> <br>
+
                     <br>
                     <b>Saving Amount :<span id="display-saving-amount"></span></b> <br>
                     <b>Remaining Balance : <span id="display-remaining-balance"></span> </b> <br>
                 </div>
-
-
             </div>
-
-
         </div>
     </div>
 
@@ -53,6 +74,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
